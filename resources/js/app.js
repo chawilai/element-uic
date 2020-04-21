@@ -11,7 +11,13 @@ window.Vue = Vue
 Vue.use(ElementUI, { locale: ElementThai });
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('my-component', require('./components/MyComponent.vue').default);
+// Vue.component('my-component', require('./components/MyComponent.vue').default);
+
+import MyComponent from './components/MyComponent.vue'
+import ChawLayouts from './components/ChawLayouts.vue'
 
 const app = new Vue({
+    components:{
+        MyComponent, ChawLayouts
+    }
 }).$mount('#app')
